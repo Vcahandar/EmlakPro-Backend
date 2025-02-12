@@ -19,11 +19,13 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Restore
-      run: dotnet restore ./EmlakProApp.sln
+      run: dotnet restore
+      working-directory: ./EmlakProApp
 
     - name: Build
-      run: dotnet build ./EmlakProApp.sln --configuration Release
+      run: dotnet build --configuration Release
+      working-directory: ./EmlakProApp
 
     - name: Publish
-      run: dotnet publish ./EmlakProApp.sln --configuration Release --no-build
- 
+      run: dotnet publish --configuration Release --no-build
+      working-directory: ./EmlakProApp

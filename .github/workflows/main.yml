@@ -24,18 +24,23 @@ jobs:
 
     - name: Check Directory
       run: ls -la
+      working-directory: ./
+
+    - name: Build
+      run: dotnet build --configuration Release
       working-directory: ./EmlakProApp
 
     - name: Publish
-      run: dotnet publish ./EmlakProApp.csproj --configuration Release --output './publish'
+      run: dotnet publish ./EmlakProApp.csproj --configuration Release --output ../publish
       working-directory: ./EmlakProApp
 
     - name: Check Publish Folder
-      run: ls -la ./publish
+      run: ls -la
+      working-directory: ./publish
 
     - name: Deployment
       uses: azure/webapps-deploy@v2
-      with :
+      with:
         app-name: EmlakProApp
         publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
-        package: './publish'
+        package: ./publish

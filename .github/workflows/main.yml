@@ -27,8 +27,8 @@ jobs:
       working-directory: ./EmlakProApp
 
     - name: Publish
-      run: dotnet publish --configuration Release --no-build
-      working-directory: ./EmlakProApp
+      run: dotnet publish --configuration Release --no-build --output '${{ secrets.AZURE_PUBLISH_PROFILE }}'
+      working-directory: ./EmlakProApp/EmlakProApp.csproj
 
     - name: Deployment
       uses: azure/webapps-deploy@v2

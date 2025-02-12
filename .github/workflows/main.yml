@@ -22,12 +22,12 @@ jobs:
       run: dotnet restore
       working-directory: ./EmlakProApp
 
-    - name: Build
-      run: dotnet build --configuration Release
+    - name: Check Directory
+      run: ls -la
       working-directory: ./EmlakProApp
 
     - name: Publish
-      run: dotnet publish EmlakProApp.csproj --configuration Release --output './publish'
+      run: dotnet publish ./EmlakProApp.csproj --configuration Release --output './publish'
       working-directory: ./EmlakProApp
 
     - name: Check Publish Folder

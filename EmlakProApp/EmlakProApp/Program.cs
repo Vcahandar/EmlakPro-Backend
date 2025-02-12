@@ -24,11 +24,12 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() || true) // H?r mühitd? Swagger aktiv olsun
 {
 	app.UseSwagger();
 	app.UseSwaggerUI();
 }
+
 
 app.UseStaticFiles();
 app.UseAuthentication();

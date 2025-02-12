@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\controllers\\regionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\controllers\\regionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,6 +31,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "EmlakProApp\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Properties\\launchSettings.json",
+              "RelativeToolTip": "EmlakProApp\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAswCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-12T19:29:57.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Program.cs",
+              "RelativeDocumentMoniker": "EmlakProApp\\Program.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Program.cs",
+              "RelativeToolTip": "EmlakProApp\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvx8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T19:29:35.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "EmlakProApp\\Data\\AppDbContext.cs",
@@ -30,12 +64,11 @@
               "RelativeToolTip": "EmlakProApp\\Data\\AppDbContext.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAqwDQAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T12:59:30.635Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T12:59:30.635Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "RegionsController.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Controllers\\RegionsController.cs",
               "RelativeDocumentMoniker": "EmlakProApp\\Controllers\\RegionsController.cs",

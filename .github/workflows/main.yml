@@ -27,7 +27,7 @@ jobs:
       working-directory: ./EmlakProApp
 
     - name: Publish
-      run: dotnet publish EmlakProApp.csproj --configuration Release --output './publish'
+      run: dotnet publish EmlakProApp.csproj.user --configuration Release --output './publish'
       working-directory: ./EmlakProApp
 
 

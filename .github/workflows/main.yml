@@ -18,6 +18,13 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
+    - name: Check Root Directory
+      run: ls -la
+
+    - name: Check Inside EmlakProApp
+      run: ls -la
+      working-directory: ./EmlakProApp
+
     - name: Restore
       run: dotnet restore
       working-directory: ./EmlakProApp
@@ -27,5 +34,17 @@ jobs:
       working-directory: ./EmlakProApp
 
     - name: Publish
-      run: dotnet publish --configuration Release --no-build
+      run: dotnet publish EmlakProApp/EmlakProApp.csproj --configuration Release --output ../publish
       working-directory: ./EmlakProApp
+
+
+    - name: Check Publish Folder
+      run: ls -la
+      working-directory: ./publish
+
+    - name: Deployment
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: EmlakProApp
+        publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+        package: ./publish

@@ -38,8 +38,7 @@
               "RelativeToolTip": "EmlakProApp\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAQAAAAAAAAAAAAswCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-12T19:29:57.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T19:29:57.283Z"
             },
             {
               "$type": "Document",
@@ -49,7 +48,7 @@
               "RelativeDocumentMoniker": "EmlakProApp\\Program.cs",
               "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Program.cs",
               "RelativeToolTip": "EmlakProApp\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAADwvx8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T19:29:35.011Z",
               "EditorCaption": ""
@@ -76,8 +75,7 @@
               "RelativeToolTip": "EmlakProApp\\Controllers\\RegionsController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T12:58:50.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T12:58:50.934Z"
             }
           ]
         }

@@ -24,20 +24,20 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline
-if (app.Environment.IsDevelopment() || true) // H?r mühitd? Swagger aktiv olsun
+if (app.Environment.IsDevelopment() || true) 
 {
 	app.UseSwagger();
 	app.UseSwaggerUI();
 }
 
 
+app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseAuthentication();
 app.UseCors("AllowAllOrigins");
 
+app.UseAuthentication();  // Auth birinci g?lm?lidir
+app.UseAuthorization();   // Sonra authorization
 
-app.UseHttpsRedirection();
-app.UseAuthorization();
 app.MapControllers();
-
 app.Run();
+

@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\controllers\\regionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\controllers\\regionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "EmlakProApp\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "EmlakProApp\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwDQAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T12:59:30.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RegionsController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Controllers\\RegionsController.cs",
+              "RelativeDocumentMoniker": "EmlakProApp\\Controllers\\RegionsController.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Controllers\\RegionsController.cs",
+              "RelativeToolTip": "EmlakProApp\\Controllers\\RegionsController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T12:58:50.934Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

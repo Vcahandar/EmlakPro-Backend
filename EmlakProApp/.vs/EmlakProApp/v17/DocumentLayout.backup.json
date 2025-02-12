@@ -3,60 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\services\\emailservices\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\services\\emailservices\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\services\\emailservices\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\services\\emailservices\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\models\\identity\\otpcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\models\\identity\\otpcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\mapper\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\mapper\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\returntypes\\account\\registerreturntype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\returntypes\\account\\registerreturntype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\migrations\\20250212084006_usernamenull.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\migrations\\20250212084006_usernamenull.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\models\\identity\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\models\\identity\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\services\\jwtservices\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\services\\jwtservices\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\dtos\\accountdtos\\returnuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\dtos\\accountdtos\\returnuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\dtos\\accountdtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\dtos\\accountdtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\dtos\\accountdtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\dtos\\accountdtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\serviceregisterations\\registerservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\serviceregisterations\\registerservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\validators\\accountdtovalidators\\registerdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\validators\\accountdtovalidators\\registerdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,188 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IEmailService.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Services\\EmailServices\\IEmailService.cs",
-              "RelativeDocumentMoniker": "EmlakProApp\\Services\\EmailServices\\IEmailService.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Services\\EmailServices\\IEmailService.cs",
-              "RelativeToolTip": "EmlakProApp\\Services\\EmailServices\\IEmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T08:49:12.349Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OtpCode.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Models\\Identity\\OtpCode.cs",
-              "RelativeDocumentMoniker": "EmlakProApp\\Models\\Identity\\OtpCode.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Models\\Identity\\OtpCode.cs",
-              "RelativeToolTip": "EmlakProApp\\Models\\Identity\\OtpCode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T08:42:51.069Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RegisterReturnType.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\ReturnTypes\\Account\\RegisterReturnType.cs",
-              "RelativeDocumentMoniker": "EmlakProApp\\ReturnTypes\\Account\\RegisterReturnType.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\ReturnTypes\\Account\\RegisterReturnType.cs",
-              "RelativeToolTip": "EmlakProApp\\ReturnTypes\\Account\\RegisterReturnType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T08:27:13.717Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MapperProfile.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Mapper\\MapperProfile.cs",
-              "RelativeDocumentMoniker": "EmlakProApp\\Mapper\\MapperProfile.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Mapper\\MapperProfile.cs",
-              "RelativeToolTip": "EmlakProApp\\Mapper\\MapperProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T08:26:43.664Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "EmlakProApp\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "EmlakProApp\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAEwEcAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T05:55:11.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Services\\EmailServices\\EmailService.cs",
-              "RelativeDocumentMoniker": "EmlakProApp\\Services\\EmailServices\\EmailService.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Services\\EmailServices\\EmailService.cs",
-              "RelativeToolTip": "EmlakProApp\\Services\\EmailServices\\EmailService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAswCIAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T05:50:13.78Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20250212084006_UsernameNull.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Migrations\\20250212084006_UsernameNull.cs",
-              "RelativeDocumentMoniker": "EmlakProApp\\Migrations\\20250212084006_UsernameNull.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Migrations\\20250212084006_UsernameNull.cs",
-              "RelativeToolTip": "EmlakProApp\\Migrations\\20250212084006_UsernameNull.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T08:40:07.944Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "JWTService.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Services\\JWTServices\\JWTService.cs",
-              "RelativeDocumentMoniker": "EmlakProApp\\Services\\JWTServices\\JWTService.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Services\\JWTServices\\JWTService.cs",
-              "RelativeToolTip": "EmlakProApp\\Services\\JWTServices\\JWTService.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T08:13:48.135Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AppUser.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Models\\Identity\\AppUser.cs",
-              "RelativeDocumentMoniker": "EmlakProApp\\Models\\Identity\\AppUser.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Models\\Identity\\AppUser.cs",
-              "RelativeToolTip": "EmlakProApp\\Models\\Identity\\AppUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T07:39:07.297Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ReturnUserDto.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\DTOs\\AccountDTOs\\ReturnUserDto.cs",
-              "RelativeDocumentMoniker": "EmlakProApp\\DTOs\\AccountDTOs\\ReturnUserDto.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\DTOs\\AccountDTOs\\ReturnUserDto.cs",
-              "RelativeToolTip": "EmlakProApp\\DTOs\\AccountDTOs\\ReturnUserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T08:26:56.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "RegisterDto.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\DTOs\\AccountDTOs\\RegisterDto.cs",
-              "RelativeDocumentMoniker": "EmlakProApp\\DTOs\\AccountDTOs\\RegisterDto.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\DTOs\\AccountDTOs\\RegisterDto.cs",
-              "RelativeToolTip": "EmlakProApp\\DTOs\\AccountDTOs\\RegisterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T07:42:11.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\DTOs\\AccountDTOs\\LoginDto.cs",
-              "RelativeDocumentMoniker": "EmlakProApp\\DTOs\\AccountDTOs\\LoginDto.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\DTOs\\AccountDTOs\\LoginDto.cs",
-              "RelativeToolTip": "EmlakProApp\\DTOs\\AccountDTOs\\LoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T08:26:01.591Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "RegisterServices.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\ServiceRegisterations\\RegisterServices.cs",
-              "RelativeDocumentMoniker": "EmlakProApp\\ServiceRegisterations\\RegisterServices.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\ServiceRegisterations\\RegisterServices.cs",
-              "RelativeToolTip": "EmlakProApp\\ServiceRegisterations\\RegisterServices.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAAAD0AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T05:49:38.891Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "RegisterDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Validators\\AccountDtoValidators\\RegisterDtoValidator.cs",
-              "RelativeDocumentMoniker": "EmlakProApp\\Validators\\AccountDtoValidators\\RegisterDtoValidator.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Validators\\AccountDtoValidators\\RegisterDtoValidator.cs",
-              "RelativeToolTip": "EmlakProApp\\Validators\\AccountDtoValidators\\RegisterDtoValidator.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T05:49:19.519Z",
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "EmlakProApp\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\Properties\\launchSettings.json",
+              "RelativeToolTip": "EmlakProApp\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-12T12:17:36.689Z",
               "EditorCaption": ""
             }
           ]

@@ -29,3 +29,11 @@ jobs:
     - name: Publish
       run: dotnet publish --configuration Release --no-build
       working-directory: ./EmlakProApp
+
+    - name: Deployment
+      uses: azure/webapps-deploy@v2
+      with :
+        app-name: EmlakProApp
+        publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+        package: './publish'
+

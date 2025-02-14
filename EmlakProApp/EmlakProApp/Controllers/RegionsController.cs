@@ -25,10 +25,10 @@ namespace EmlakProApp.Controllers
 
 
 
-		[HttpGet("all")]
-		public async Task<ActionResult<IEnumerable<Region>>> GetAll()
-		{
-			return await _appDbContext.region.ToListAsync();
-		}
+		//[HttpGet("all")]
+		//public async Task<ActionResult<IEnumerable<Region>>> GetAll()
+		//{
+		//	return await _appDbContext.region.ToListAsync();
+		//}
 	}
 }

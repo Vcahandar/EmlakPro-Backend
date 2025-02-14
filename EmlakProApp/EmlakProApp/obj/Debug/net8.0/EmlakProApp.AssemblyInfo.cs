@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EmlakProApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3846de40a4eb92feb458ceab6439eeea4ee51a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmlakProApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmlakProApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

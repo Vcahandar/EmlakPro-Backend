@@ -328,3 +328,4 @@ C:\Users\HP\Desktop\New folder (2)\EmlakPro\EmlakProApp\EmlakProApp\obj\Debug\ne
 C:\Users\HP\Desktop\New folder (2)\EmlakPro\EmlakProApp\EmlakProApp\obj\Debug\net8.0\EmlakProApp.pdb
 C:\Users\HP\Desktop\New folder (2)\EmlakPro\EmlakProApp\EmlakProApp\obj\Debug\net8.0\EmlakProApp.genruntimeconfig.cache
 C:\Users\HP\Desktop\New folder (2)\EmlakPro\EmlakProApp\EmlakProApp\obj\Debug\net8.0\ref\EmlakProApp.dll
+C:\Users\HP\Desktop\New folder (2)\EmlakPro\EmlakProApp\EmlakProApp\obj\Debug\net8.0\EmlakProApp.sourcelink.json

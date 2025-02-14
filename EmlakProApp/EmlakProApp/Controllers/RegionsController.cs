@@ -17,13 +17,15 @@ namespace EmlakProApp.Controllers
         }
 
 		[HttpGet]
-
 		public async Task<ActionResult<IEnumerable<Region>>> GetRegions()
 		{
 			//return await _appDbContext.region.ToListAsync();
 			return Ok();
 		}
 
+
+
+		[HttpGet("all")]
 		public async Task<ActionResult<IEnumerable<Region>>> GetAll()
 		{
 			return await _appDbContext.region.ToListAsync();

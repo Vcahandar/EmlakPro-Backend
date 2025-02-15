@@ -11,9 +11,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Cors;
 
 namespace EmlakProApp.Controllers
 {
+	[EnableCors("AllowAll")]  // CORS icazəsi verildi
 	[Route("api/[controller]")]
 	[ApiController]
 	public class AccountController : ControllerBase
@@ -47,33 +49,25 @@ namespace EmlakProApp.Controllers
 
 
 		[HttpPost("Register")]
-		public async Task<IActionResult> Register([FromForm] RegisterDto registerDto)
+		public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
 		{
-			var result = await _accountService.UserRegister(registerDto, _mapper);
-			if (result.User == null)
+			try
 			{
-				return BadRequest(new { Message = result.Message, StatusCode = result.StatusCode });
+				var result = await _accountService.UserRegister(registerDto, _mapper);
+				if (result.User == null)
+				{
+					return BadRequest(new { Message = result.Message });
+				}
+
+				await _accountService.GenerateAndSendOtpAsync(registerDto.Email, result.User.Id);
+
+				return Ok(new { Message = "OTP kodu e-mail ünvanınıza göndərildi. Təsdiqlədikdən sonra login edə bilərsiniz." });
 			}
-
-			var otpCode = new Random().Next(100000, 999999).ToString();
-
-			var otp = new OtpCode
+			catch (Exception)
 			{
-				UserId = result.User.Id,
-				Code = otpCode,
-				ExpiryTime = DateTime.UtcNow.AddMinutes(5) // OTP 5 dəqiqə etibarlı olacaq
-			};
-			_context.OtpCodes.Add(otp);
-			await _context.SaveChangesAsync();
-
-			_emailService.SendOtpEmail(registerDto.Email, "Your OTP Code", otpCode);
-
-			return Ok(new { Message = "OTP kodu e-mail ünvanınıza göndərildi. Təsdiqlədikdən sonra login edə bilərsiniz." });
+				return StatusCode(500, "Gözlənilməz xəta baş verdi. Zəhmət olmasa, sonra yenidən cəhd edin.");
+			}
 		}
-
-
-
-
 
 
 		[HttpPost("Login")]
@@ -97,20 +91,20 @@ namespace EmlakProApp.Controllers
 
 
 
-		[HttpGet("VerifyEmail")]
-		public async Task<IActionResult> VerifyEmail(string email, string token)
-		{
-			AppUser user = await _userManager.FindByEmailAsync(email);
-			if (user == null) return NotFound();
-			if (user.EmailConfirmed)
-			{
-				return Ok(new { result = "success" });
-			}
-			await _userManager.ConfirmEmailAsync(user, token);
-			await _signInManager.SignInAsync(user, true);
-			return Ok(new { Email = email, Token = token });
+		//[HttpGet("VerifyEmail")]
+		//public async Task<IActionResult> VerifyEmail(string email, string token)
+		//{
+		//	AppUser user = await _userManager.FindByEmailAsync(email);
+		//	if (user == null) return NotFound();
+		//	if (user.EmailConfirmed)
+		//	{
+		//		return Ok(new { result = "success" });
+		//	}
+		//	await _userManager.ConfirmEmailAsync(user, token);
+		//	await _signInManager.SignInAsync(user, true);
+		//	return Ok(new { Email = email, Token = token });
 
-		}
+		//}
 
 
 
@@ -151,21 +145,21 @@ namespace EmlakProApp.Controllers
 		}
 
 
-		[HttpGet("signin-google")]
-		public IActionResult SignInWithGoogle()
-		{
-			var properties = new AuthenticationProperties { RedirectUri = Url.Action("GoogleResponse") };
-			return Challenge(properties, GoogleDefaults.AuthenticationScheme);
-		}
+		//[HttpGet("signin-google")]
+		//public IActionResult SignInWithGoogle()
+		//{
+		//	var properties = new AuthenticationProperties { RedirectUri = Url.Action("GoogleResponse") };
+		//	return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+		//}
 
 
-		[HttpGet("google-response")]
-		public async Task<IActionResult> GoogleResponse()
-		{
-			var result = await _accountService.GoogleResponse();
+		//[HttpGet("google-response")]
+		//public async Task<IActionResult> GoogleResponse()
+		//{
+		//	var result = await _accountService.GoogleResponse();
 
-			return Ok();
-		}
+		//	return Ok();
+		//}
 
 
 		[HttpGet("Detect-Device")]

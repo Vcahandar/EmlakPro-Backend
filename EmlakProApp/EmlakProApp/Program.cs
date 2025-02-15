@@ -4,20 +4,22 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Load configuration
 var config = builder.Configuration;
 
 // Register services (Dependency Injection)
 builder.Services.Register(config);
 
+// CORS siyas?ti ?lav? et
 builder.Services.AddCors(options =>
 {
-	options.AddPolicy("AllowAllOrigins",
-		builder =>
+	options.AddPolicy("AllowAll",
+		policy =>
 		{
-			builder.AllowAnyOrigin()
-				   .AllowAnyHeader()
-				   .AllowAnyMethod();
+			policy.AllowAnyOrigin()
+				  .AllowAnyMethod()
+				  .AllowAnyHeader();
 		});
 });
 
@@ -34,7 +36,7 @@ if (app.Environment.IsDevelopment() || true)
 
 //app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseCors("AllowAllOrigins");
+app.UseCors("AllowAll");
 
 app.UseAuthentication();  // Auth birinci g?lm?lidir
 app.UseAuthorization();   // Sonra authorization

@@ -13,5 +13,7 @@ namespace EmlakProApp.Services.AccountServices
 		Task<GoogleResponseReturnType> GoogleResponse();
 		Task<GetUserReturnType> GetOne(string emailOrUserName, IMapper mapper);
 		DeviceReturnType DetectDevice(HttpContext context);
+		Task<string> GenerateAndSendOtpAsync(string email, string userId);
+
 	}
 }

@@ -6,6 +6,7 @@ using EmlakProApp.Services.EmailServices;
 using EmlakProApp.Services.JWTServices;
 using EmlakProApp.Utilities;
 using EmlakProApp.Validators.AccountDtoValidators;
+using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
@@ -37,6 +38,8 @@ namespace EmlakProApp.ServiceRegisterations
 			);
 
 			services.AddAutoMapper(cfg => cfg.AddProfile(new MapperProfile()));
+			services.AddValidatorsFromAssemblyContaining<RegisterDtoValidator>();
+
 
 			// Configure Identity
 			services.AddIdentity<AppUser, IdentityRole>(opt =>

@@ -32,23 +32,24 @@ namespace EmlakProApp.Services.EmailServices
 			smtpClient.Send(message);
 		}
 
-		public void SendOtpEmail(string address, string subject, string otpCode)
+		public async Task SendOtpEmailAsync(string address, string subject, string otpCode)
 		{
-			MailMessage message = new();
+			using MailMessage message = new();
 			message.From = new MailAddress(_config.From);
-			string body = $"Sizin OTP kodunuz: {otpCode}";
-			message.IsBodyHtml = true;
-			message.Body = body;
 			message.Subject = subject;
+			message.Body = $"Sizin OTP kodunuz: {otpCode}";
+			message.IsBodyHtml = true;
 			message.To.Add(address);
 
-			SmtpClient smtpClient = new();
+			using SmtpClient smtpClient = new();
 			smtpClient.Port = _config.Port;
 			smtpClient.Host = _config.SmtpServer;
 			smtpClient.EnableSsl = true;
 			smtpClient.Credentials = new NetworkCredential(_config.From, _config.Password);
-			smtpClient.Send(message);
+
+			await smtpClient.SendMailAsync(message);
 		}
+
 
 	}
 

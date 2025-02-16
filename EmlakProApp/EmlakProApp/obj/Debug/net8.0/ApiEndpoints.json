@@ -50,12 +50,12 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "email",
+        "Name": "EmailOrUsername",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "password",
+        "Name": "Password",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -71,45 +71,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "registerDto",
-        "Type": "EmlakProApp.DTOs.AccountDTOs.RegisterDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "EmlakProApp.Controllers.AccountController",
-    "Method": "ResetPassword",
-    "RelativePath": "api/Account/ResetPassword",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
         "Name": "email",
         "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "token",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "EmlakProApp.Controllers.AccountController",
-    "Method": "ResetPassword",
-    "RelativePath": "api/Account/ResetPassword",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "resetPasswordDto",
-        "Type": "EmlakProApp.DTOs.AccountDTOs.ResetPasswordDto",
         "IsRequired": true
       }
     ],

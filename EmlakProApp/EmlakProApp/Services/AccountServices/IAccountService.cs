@@ -8,9 +8,10 @@ namespace EmlakProApp.Services.AccountServices
 {
 	public interface IAccountService
 	{
-		Task<RegisterReturnType> UserRegister([FromForm] RegisterDto registerDto, IMapper mapper);
+		Task<RegisterReturnType> UserRegister(string email);
 		Task<LoginReturnType> UserLogin(LoginDto loginDto);
 		Task<GoogleResponseReturnType> GoogleResponse();
+		Task<ForgotPasswordDto> ForgotPassword(string email);
 		Task<GetUserReturnType> GetOne(string emailOrUserName, IMapper mapper);
 		DeviceReturnType DetectDevice(HttpContext context);
 		Task<string> GenerateAndSendOtpAsync(string email, string userId);

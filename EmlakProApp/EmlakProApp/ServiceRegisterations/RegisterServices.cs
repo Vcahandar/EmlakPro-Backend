@@ -48,10 +48,10 @@ namespace EmlakProApp.ServiceRegisterations
 				opt.Lockout.AllowedForNewUsers = true;
 				opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
 
-				opt.Password.RequiredLength = 8;
-				opt.Password.RequireLowercase = true;
-				opt.Password.RequireUppercase = true;
-				opt.Password.RequireNonAlphanumeric = true;
+				opt.Password.RequiredLength = 6; 
+				opt.Password.RequireLowercase = false;
+				opt.Password.RequireUppercase = false;
+				opt.Password.RequireNonAlphanumeric = false;
 
 				opt.User.RequireUniqueEmail = true;
 				opt.SignIn.RequireConfirmedEmail = true;

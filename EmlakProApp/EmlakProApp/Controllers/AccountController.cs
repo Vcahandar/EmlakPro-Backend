@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Cors;
+using static Org.BouncyCastle.Math.EC.ECCurve;
 
 namespace EmlakProApp.Controllers
 {
@@ -26,6 +27,7 @@ namespace EmlakProApp.Controllers
 		private readonly IEmailService _emailService;
 		private readonly UserManager<AppUser> _userManager;
 		private readonly SignInManager<AppUser> _signInManager;
+
 
 		public AccountController(AppDbContext context, IAccountService accountService, IMapper mapper, IEmailService emailService, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
 		{
@@ -49,45 +51,44 @@ namespace EmlakProApp.Controllers
 
 
 		[HttpPost("Register")]
-		public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
+		public async Task<IActionResult> Register([FromBody] string email)
 		{
 			try
 			{
-				var result = await _accountService.UserRegister(registerDto, _mapper);
+				var result = await _accountService.UserRegister(email);
 				if (result.User == null)
 				{
 					return BadRequest(new { Message = result.Message });
 				}
 
-				await _accountService.GenerateAndSendOtpAsync(registerDto.Email, result.User.Id);
-
-				return Ok(new { Message = "OTP kodu e-mail ünvanınıza göndərildi. Təsdiqlədikdən sonra login edə bilərsiniz." });
+				return Ok(new { Message = "OTP kodunuz email ünvanınıza göndərildi. O kodu daxil edərək giriş edin." });
 			}
 			catch (Exception)
 			{
-				return StatusCode(500, "Gözlənilməz xəta baş verdi. Zəhmət olmasa, sonra yenidən cəhd edin.");
+				return StatusCode(500, "Sistemde problem var. Zəhmət olmasa, bir az sonra yenidən cəhd edin.");
 			}
 		}
+
 
 
 		[HttpPost("Login")]
-		public async Task<IActionResult> Login([FromForm] string email, [FromForm] string password)
+		public async Task<IActionResult> Login([FromForm] LoginDto loginDto)
 		{
-			var user = await _userManager.FindByEmailAsync(email);
-			if (user == null) return NotFound("İstifadəçi tapılmadı.");
+			var result = await _accountService.UserLogin(loginDto);
 
-			// Email təsdiqlənməyibsə, girişə icazə verilmir
-			if (!user.EmailConfirmed)
+			if (result.StatusCode == 200)
 			{
-				return BadRequest("E-mail təsdiqlənməyib. Zəhmət olmasa, OTP kodu ilə təsdiq edin.");
+				Response.Cookies.Append("jwt", result.JWTToken, new CookieOptions
+				{
+					HttpOnly = true,
+					Secure = true, 
+					SameSite = SameSiteMode.Strict,
+					Expires = DateTime.UtcNow.AddHours(1)
+				});
 			}
 
-			var result = await _signInManager.PasswordSignInAsync(user, password, false, false);
-			if (!result.Succeeded) return Unauthorized("Yanlış email və ya şifrə.");
-
-			return Ok("Uğurla giriş etdiniz.");
+			return StatusCode(result.StatusCode, new { result.Message, result.StatusCode });
 		}
-
 
 
 
@@ -111,38 +112,11 @@ namespace EmlakProApp.Controllers
 		[HttpPost("ForgotPassword")]
 		public async Task<IActionResult> ForgotPassword([Required, EmailAddress] string email)
 		{
-			if (email == null) return BadRequest();
-			var user = await _userManager.FindByEmailAsync(email);
-			if (user == null) return NotFound();
-			var token = await _userManager.GeneratePasswordResetTokenAsync(user);
-			var url = Url.Action(nameof(ResetPassword), "Account", new { Email = email, Token = token }, Request.Scheme, Request.Host.ToString());
-			_emailService.ConfirmEmail(email, "Reset Password", url, $"<a href={url}>Click Here to start reseting Password</a>");
-			return Ok();
+			var result = await _accountService.ForgotPassword(email);
+			return StatusCode(result.StatusCode, result.Message);
 		}
 
 
-		[HttpGet("ResetPassword")]
-		public async Task<IActionResult> ResetPassword([Required, EmailAddress] string email, [Required] string token)
-		{
-			AppUser user = await _userManager.FindByEmailAsync(email);
-			if (user == null) return BadRequest();
-			bool checkToken = await _userManager.VerifyUserTokenAsync(user, _userManager.Options.Tokens.PasswordResetTokenProvider, "ResetPassword", token);
-			if (!checkToken) return BadRequest("Link artiq istifade olunub!!");
-			return Ok(new ResetPasswordDto { Email = email, Token = token });
-		}
-
-
-
-		[HttpPost("ResetPassword")]
-		public async Task<IActionResult> ResetPassword(ResetPasswordDto resetPasswordDto)
-		{
-			if (resetPasswordDto == null) return BadRequest();
-			AppUser user = await _userManager.FindByEmailAsync(resetPasswordDto.Email);
-			if (user == null) return NotFound();
-			await _userManager.ResetPasswordAsync(user, resetPasswordDto.Token, resetPasswordDto.NewPassword);
-			await _userManager.UpdateSecurityStampAsync(user);
-			return Ok();
-		}
 
 
 		//[HttpGet("signin-google")]

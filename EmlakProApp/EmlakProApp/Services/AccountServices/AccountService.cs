@@ -9,6 +9,7 @@ using EmlakProApp.Services.JWTServices;
 using FluentValidation;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using UAParser;
 
 namespace EmlakProApp.Services.AccountServices
@@ -25,11 +26,6 @@ namespace EmlakProApp.Services.AccountServices
 		private readonly IEmailService _emailService;
 		private readonly IValidator<RegisterDto> _validator;
 
-
-
-		// 
-
-
 		public AccountService(UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager,
 							  AppDbContext context, IValidator<RegisterDto> validator, SignInManager<AppUser> signInManager,
 							  IConfiguration config, IJWTService jwtService, IEmailService emailService)
@@ -44,6 +40,7 @@ namespace EmlakProApp.Services.AccountServices
 			uaParser = Parser.GetDefault();
 			_emailService = emailService;
 		}
+
 
 		public async Task<GetUserReturnType> GetOne(string? emailOrUserName, IMapper mapper)
 		{
@@ -121,51 +118,43 @@ namespace EmlakProApp.Services.AccountServices
 			return null;
 		}
 
-
 		public async Task<LoginReturnType> UserLogin(LoginDto loginDto)
 		{
-			if (loginDto == null) return new() { Message = "Bad Request", StatusCode = 404 };
+			if (loginDto == null)
+				return new() { Message = "Bad Request", StatusCode = 400 };
+
 			var user = await _userManager.FindByEmailAsync(loginDto.EmailOrUsername);
 			if (user == null)
-			{
-				user = await _userManager.FindByNameAsync(loginDto.EmailOrUsername);
-				if (user == null) return new() { Message = "The User not found", StatusCode = 404 };
-			}
+				return new() { Message = "İstifadəçi tapılmadı", StatusCode = 404 };
 
-			var result = await _signInManager.PasswordSignInAsync(user, loginDto.Password, true, true);
-			if (!result.Succeeded) return new() { Message = result.ToString(), StatusCode = 404 };
-			if (result.IsLockedOut) return new() { Message = "Bad Request", StatusCode = 404 };
+			var isPasswordValid = await _userManager.CheckPasswordAsync(user, loginDto.Password);
+			if (!isPasswordValid)
+				return new() { Message = "Yanlış və ya müddəti bitmiş OTP kodu", StatusCode = 401 };
 
 			var roles = await _userManager.GetRolesAsync(user);
+			var token = _jwtService.JWTToken(_config, user, roles);
 
-			var stringToken = _jwtService.JWTToken(_config, user, roles);
-
-			return new() { Message = "Signed in successfully", StatusCode = 200, JWTToken = stringToken };
+			return new() { Message = "Giriş uğurla tamamlandı", StatusCode = 200, JWTToken = token };
 		}
 
-		public async Task<RegisterReturnType> UserRegister(RegisterDto registerDto, IMapper mapper)
+		public async Task<RegisterReturnType> UserRegister(string email)
 		{
-			var validationResult = await _validator.ValidateAsync(registerDto);
-
-			if (!validationResult.IsValid)
-			{
-				return new RegisterReturnType
-				{
-					Message = string.Join(", ", validationResult.Errors.Select(e => e.ErrorMessage)),
-					StatusCode = 400
-				};
-			}
-
-			if (await _userManager.FindByEmailAsync(registerDto.Email) is not null)
+			if (await _userManager.FindByEmailAsync(email) is not null)
 			{
 				return new RegisterReturnType { Message = "Bu email ilə artıq qeydiyyat var!", StatusCode = 400 };
 			}
 
-			var user = mapper.Map<AppUser>(registerDto);
-			user.UserName = registerDto.Email;
-			user.Name ??= "Unknown";
+			// Yeni istifadəçi obyektini yaradın
+			var user = new AppUser
+			{
+				UserName = email,
+				Email = email
+			};
 
-			var result = await _userManager.CreateAsync(user, registerDto.Password);
+			// OTP kodunu yaradın və parol kimi təyin edin
+			var otpCode = new Random().Next(100000, 999999).ToString();
+
+			var result = await _userManager.CreateAsync(user, otpCode);  // OTP as password
 
 			if (!result.Succeeded)
 			{
@@ -176,13 +165,38 @@ namespace EmlakProApp.Services.AccountServices
 				};
 			}
 
-			// Burada yaradılmış user-i də qaytarırıq
+			// OTP kodunu email vasitəsilə göndərin
+			_emailService.SendOtpEmail(email, "Your OTP Code", otpCode);
+
 			return new RegisterReturnType
 			{
 				User = user,
-				Message = "Qeydiyyat uğurla tamamlandı!",
+				Message = "OTP kodunuz email ünvanınıza göndərildi. O kodu istifadə edərək sayta daxil olun.",
 				StatusCode = 200
 			};
+		}
+
+		public async Task<ForgotPasswordDto> ForgotPassword(string email)
+		{
+			if (string.IsNullOrEmpty(email))
+				return new ForgotPasswordDto { StatusCode = 400, Message = "Email tələb olunur." };
+
+			var user = await _userManager.FindByEmailAsync(email);
+			if (user == null)
+				return new ForgotPasswordDto { StatusCode = 404, Message = "İstifadəçi tapılmadı." };
+
+			var otpCode = new Random().Next(100000, 999999).ToString();
+			var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+			var resetResult = await _userManager.ResetPasswordAsync(user, token, otpCode);
+
+			if (!resetResult.Succeeded)
+				return new ForgotPasswordDto { StatusCode = 500, Message = "Şifrəni yeniləmək mümkün olmadı." };
+
+			var subject = "Yeni Şifrəniz (OTP Kodu)";
+			var body = $"Sizin yeni müvəqqəti şifrəniz: <b>{otpCode}</b>. Bu kod ilə giriş edə bilərsiz";
+			_emailService.ConfirmEmail(email, subject, null, body);
+
+			return new ForgotPasswordDto { StatusCode = 200, Message = "Yeni parolunuz emailə göndərildi." };
 		}
 
 
@@ -206,9 +220,6 @@ namespace EmlakProApp.Services.AccountServices
 
 			return otpCode;
 		}
-
-
-
 
 
 	}

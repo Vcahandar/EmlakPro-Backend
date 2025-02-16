@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|c:\\users\\hp\\desktop\\new folder (2)\\emlakpro\\emlakproapp\\emlakproapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0364B360-8690-4233-894B-B7DDBAF3BE2F}|EmlakProApp\\EmlakProApp.csproj|solutionrelative:emlakproapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\appsettings.json",
+              "RelativeDocumentMoniker": "EmlakProApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\New folder (2)\\EmlakPro\\EmlakProApp\\EmlakProApp\\appsettings.json",
+              "RelativeToolTip": "EmlakProApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-16T21:24:29.5Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -32,7 +32,7 @@ namespace EmlakProApp.Services.EmailServices
 			smtpClient.Send(message);
 		}
 
-		public async Task SendOtpEmailAsync(string address, string subject, string otpCode)
+		public void SendOtpEmail(string address, string subject, string otpCode)
 		{
 			using MailMessage message = new();
 			message.From = new MailAddress(_config.From);
@@ -47,8 +47,9 @@ namespace EmlakProApp.Services.EmailServices
 			smtpClient.EnableSsl = true;
 			smtpClient.Credentials = new NetworkCredential(_config.From, _config.Password);
 
-			await smtpClient.SendMailAsync(message);
+			smtpClient.Send(message);  // Asinxron əvəzinə sinxron metod
 		}
+
 
 
 	}

@@ -201,11 +201,12 @@ namespace EmlakProApp.Services.AccountServices
 			_context.OtpCodes.Add(otp);
 			await _context.SaveChangesAsync();
 
-			// OTP kodunu email vasitəsilə göndərin
-			await _emailService.SendOtpEmailAsync(email, "Your OTP Code", otpCode);
+			// OTP kodunu email vasitəsilə sinxron şəkildə göndərin
+			_emailService.SendOtpEmail(email, "Your OTP Code", otpCode);
 
 			return otpCode;
 		}
+
 
 
 
